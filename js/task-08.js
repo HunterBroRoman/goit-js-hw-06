@@ -1,4 +1,4 @@
-let form = document.querySelector(".login-form"),
+const form = document.querySelector(".login-form"),
   formEmail = document.querySelector('[type="email"]'),
   formPassword = document.querySelector('[type="password"]');
 
@@ -10,6 +10,7 @@ function onFormSubmit(event) {
   const {
     elements: { email, password },
   } = event.currentTarget;
+
   if (email.value === "" || password.value === "") {
     return alert("Любий друже, заповни всі поля!");
   } //проверка на пустое поле
@@ -17,11 +18,15 @@ function onFormSubmit(event) {
   const formData = new FormData(event.currentTarget);
   //сбор данных форм и их отправка
 
-  formData.forEach((value, name) => {
-    console.log("name", name);
-    console.log("value", value);
-  }); //проверка правильности
+  // formData.forEach((value, name) => {
+  //   console.log("name", name);
+  //   console.log("value", value);
+  // }); //проверка правильности
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  console.log({[email.name]: email.value,
+               [password.name]: password.value,});
+               
   event.currentTarget.reset(); //вывод в консоль и очистка полей формы
 }
+
+
