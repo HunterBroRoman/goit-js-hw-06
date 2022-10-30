@@ -6,7 +6,6 @@ const body = document.querySelector('body');
 const btnChange = document.querySelector('.change-color');
 const spanColor = document.querySelector('.color');
 
-
 btnChange.addEventListener('click', changeColor);
 
 function changeColor() {
