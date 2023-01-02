@@ -8,3 +8,15 @@ input.addEventListener('input', scrollChek);
 function scrollChek(event) {
     textId.style.fontSize = event.currentTarget.value + "px";
 }
+
+//------------------second variant ------------------------------
+
+// const inputRangeRef = document.querySelector("#font-size-control");
+// const inputTextRef = document.querySelector("#text");
+
+// const handleInput = () => {
+//   inputTextRef.style.fontSize = `${inputRangeRef.value}px`;
+// };
+
+// inputRangeRef.addEventListener("input", handleInput);
+
